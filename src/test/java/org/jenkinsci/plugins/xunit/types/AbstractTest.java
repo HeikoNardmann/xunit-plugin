@@ -49,7 +49,7 @@ public abstract class AbstractTest {
     protected void convertAndValidate(Class<? extends InputMetric> metricClass, String inputXMLPath, String expectedResultPath) throws Exception {
         InputMetric inputMetric = InputMetricFactory.getInstance(metricClass);
 
-        File outputXMLFile = File.createTempFile("result", "xml");
+        File outputXMLFile = File.createTempFile("result", ".xml");
         File inputXMLFile = new File(this.getClass().getResource(inputXMLPath).toURI());
 
         //The input file must be valid
@@ -80,7 +80,7 @@ public abstract class AbstractTest {
         CustomInputMetric customInputMetric = CustomInputMetric.class.newInstance();
         customInputMetric.setCustomXSLFile(new File(this.getClass().getResource(inputXSLPath).toURI()));
 
-        File outputXMLFile = File.createTempFile("result", "xml");
+        File outputXMLFile = File.createTempFile("result", ".xml");
         File inputXMLFile = new File(this.getClass().getResource(inputXMLPath).toURI());
 
         //The input file must be valid
