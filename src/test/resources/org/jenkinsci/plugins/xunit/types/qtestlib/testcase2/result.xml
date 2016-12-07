@@ -1,157 +1,960 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="tst_QString" tests="122" failures="0" errors="0" time="0.768">
-    <properties>
-        <property name="QtVersion" value="5.2.0"/>
-        <property name="QTestVersion" value="5.2.0"/>
-    </properties>
-    <testcase classname="tst_QString" name="initTestCase" time="0.000"/>
-    <testcase classname="tst_QString" name="fromStdString" time="0.013"/>
-    <testcase classname="tst_QString" name="toStdString" time="0.000"/>
-    <testcase classname="tst_QString" name="check_QTextIOStream" time="0.000"/>
-    <testcase classname="tst_QString" name="check_QTextStream" time="0.000"/>
-    <testcase classname="tst_QString" name="check_QDataStream" time="0.000"/>
-    <testcase classname="tst_QString" name="fromRawData" time="0.000"/>
-    <testcase classname="tst_QString" name="setRawData" time="0.000"/>
-    <testcase classname="tst_QString" name="endsWith" time="0.000"/>
-    <testcase classname="tst_QString" name="startsWith" time="0.000"/>
-    <testcase classname="tst_QString" name="setNum" time="0.000"/>
-    <testcase classname="tst_QString" name="toDouble" time="0.001"/>
-    <testcase classname="tst_QString" name="toFloat" time="0.000"/>
-    <testcase classname="tst_QString" name="toLong" time="0.000"/>
-    <testcase classname="tst_QString" name="toULong" time="0.000"/>
-    <testcase classname="tst_QString" name="toLongLong" time="0.070"/>
-    <testcase classname="tst_QString" name="toULongLong" time="0.000"/>
-    <testcase classname="tst_QString" name="toUInt" time="0.000"/>
-    <testcase classname="tst_QString" name="toInt" time="0.000"/>
-    <testcase classname="tst_QString" name="toShort" time="0.000"/>
-    <testcase classname="tst_QString" name="toUShort" time="0.000"/>
-    <testcase classname="tst_QString" name="replace_qchar_qchar" time="0.000"/>
-    <testcase classname="tst_QString" name="replace_qchar_qstring" time="0.000"/>
-    <testcase classname="tst_QString" name="replace_uint_uint" time="0.001"/>
-    <testcase classname="tst_QString" name="replace_uint_uint_extra" time="0.223"/>
-    <testcase classname="tst_QString" name="replace_string" time="0.004"/>
-    <testcase classname="tst_QString" name="replace_regexp" time="0.008"/>
-    <testcase classname="tst_QString" name="remove_uint_uint" time="0.001"/>
-    <testcase classname="tst_QString" name="remove_string" time="0.003"/>
-    <testcase classname="tst_QString" name="remove_regexp" time="0.001">
-        <system-err>
-            <![CDATA[QWARN : QString::replace: invalid QRegularExpression object]]></system-err>
-    </testcase>
-    <testcase classname="tst_QString" name="swap" time="0.000"/>
-    <testcase classname="tst_QString" name="prepend" time="0.000"/>
-    <testcase classname="tst_QString" name="prepend_bytearray" time="0.000"/>
-    <testcase classname="tst_QString" name="append" time="0.000"/>
-    <testcase classname="tst_QString" name="append_bytearray" time="0.000"/>
-    <testcase classname="tst_QString" name="operator_pluseq_bytearray" time="0.000"/>
-    <testcase classname="tst_QString" name="operator_eqeq_bytearray" time="0.000"/>
-    <testcase classname="tst_QString" name="operator_eqeq_nullstring" time="0.000"/>
-    <testcase classname="tst_QString" name="operator_smaller" time="0.000"/>
-    <testcase classname="tst_QString" name="insert" time="0.000"/>
-    <testcase classname="tst_QString" name="simplified" time="0.001"/>
-    <testcase classname="tst_QString" name="trimmed" time="0.000"/>
-    <testcase classname="tst_QString" name="toUpper" time="0.000">
-        <system-out>
-            <![CDATA[XFAIL : /home/frederik/dev/qt/qt-src-stable/qtbase/tests/auto/corelib/tools/qstring/tst_qstring.cpp:1876 :: test doesn't work with ICU support, since QChar is unaware of any locale]]></system-out>
-    </testcase>
-    <testcase classname="tst_QString" name="toLower" time="0.000">
-        <system-out>
-            <![CDATA[XFAIL : /home/frederik/dev/qt/qt-src-stable/qtbase/tests/auto/corelib/tools/qstring/tst_qstring.cpp:1935 :: test doesn't work with ICU support, since QChar is unaware of any locale]]></system-out>
-    </testcase>
-    <testcase classname="tst_QString" name="toCaseFolded" time="0.071"/>
-    <testcase classname="tst_QString" name="rightJustified" time="0.000"/>
-    <testcase classname="tst_QString" name="leftJustified" time="0.000"/>
-    <testcase classname="tst_QString" name="mid" time="0.000"/>
-    <testcase classname="tst_QString" name="right" time="0.000"/>
-    <testcase classname="tst_QString" name="left" time="0.000"/>
-    <testcase classname="tst_QString" name="midRef" time="0.000"/>
-    <testcase classname="tst_QString" name="rightRef" time="0.000"/>
-    <testcase classname="tst_QString" name="leftRef" time="0.000"/>
-    <testcase classname="tst_QString" name="stringRef" time="0.000"/>
-    <testcase classname="tst_QString" name="contains" time="0.000"/>
-    <testcase classname="tst_QString" name="count" time="0.000"/>
-    <testcase classname="tst_QString" name="lastIndexOf" time="0.003"/>
-    <testcase classname="tst_QString" name="lastIndexOfInvalidRegex" time="0.000"/>
-    <testcase classname="tst_QString" name="indexOf" time="0.118"/>
-    <testcase classname="tst_QString" name="indexOf2" time="0.002"/>
-    <testcase classname="tst_QString" name="sprintf" time="0.000"/>
-    <testcase classname="tst_QString" name="fill" time="0.000"/>
-    <testcase classname="tst_QString" name="truncate" time="0.000"/>
-    <testcase classname="tst_QString" name="constructor" time="0.000"/>
-    <testcase classname="tst_QString" name="constructorQByteArray" time="0.000"/>
-    <testcase classname="tst_QString" name="STL" time="0.000"/>
-    <testcase classname="tst_QString" name="macTypes" time="0.000">
-        <skipped
-                message="/home/frederik/dev/qt/qt-src-stable/qtbase/tests/auto/corelib/tools/qstring/tst_qstring.cpp:946 :: [] This is a Mac-only test"/>
-    </testcase>
-    <testcase classname="tst_QString" name="isEmpty" time="0.000"/>
-    <testcase classname="tst_QString" name="isNull" time="0.000"/>
-    <testcase classname="tst_QString" name="acc_01" time="0.000">
-        <system-err>
-            <![CDATA[QWARN : QIODevice::write: device not open]]></system-err>
-    </testcase>
-    <testcase classname="tst_QString" name="length" time="0.000"/>
-    <testcase classname="tst_QString" name="utf8" time="0.000"/>
-    <testcase classname="tst_QString" name="fromUtf8" time="0.001"/>
-    <testcase classname="tst_QString" name="nullFromUtf8" time="0.000"/>
-    <testcase classname="tst_QString" name="fromLocal8Bit" time="0.000"/>
-    <testcase classname="tst_QString" name="local8Bit" time="0.000"/>
-    <testcase classname="tst_QString" name="fromLatin1Roundtrip" time="0.000"/>
-    <testcase classname="tst_QString" name="toLatin1Roundtrip" time="0.000"/>
-    <testcase classname="tst_QString" name="stringRef_toLatin1Roundtrip" time="0.000"/>
-    <testcase classname="tst_QString" name="stringRef_utf8" time="0.000"/>
-    <testcase classname="tst_QString" name="stringRef_local8Bit" time="0.000"/>
-    <testcase classname="tst_QString" name="fromLatin1" time="0.000"/>
-    <testcase classname="tst_QString" name="fromAscii" time="0.000"/>
-    <testcase classname="tst_QString" name="fromUcs4" time="0.000"/>
-    <testcase classname="tst_QString" name="toUcs4" time="0.000"/>
-    <testcase classname="tst_QString" name="arg" time="0.001">
-        <system-err>
-            <![CDATA[QWARN : QString::arg: Argument missing: "" , 0 ]]>
-            <![CDATA[QWARN : QString::arg: Argument missing: "" , 0 ]]>
-            <![CDATA[QWARN : QString::arg: Argument missing: " " , 0 ]]>
-            <![CDATA[QWARN : QString::arg: Argument missing: "%" , 0 ]]>
-            <![CDATA[QWARN : QString::arg: Argument missing: "%%" , 0 ]]>
-            <![CDATA[QWARN : QString::arg: Argument missing: "%%%" , 0 ]]></system-err>
-    </testcase>
-    <testcase classname="tst_QString" name="number" time="0.000"/>
-    <testcase classname="tst_QString" name="arg_fillChar" time="0.000"/>
-    <testcase classname="tst_QString" name="capacity" time="0.000"/>
-    <testcase classname="tst_QString" name="section" time="0.004"/>
-    <testcase classname="tst_QString" name="double_conversion" time="0.001"/>
-    <testcase classname="tst_QString" name="integer_conversion" time="0.002"/>
-    <testcase classname="tst_QString" name="tortureSprintfDouble" time="0.124"/>
-    <testcase classname="tst_QString" name="toNum" time="0.000"/>
-    <testcase classname="tst_QString" name="localeAwareCompare" time="0.070">
-        <system-out>
-            <![CDATA[XFAIL : /home/frederik/dev/qt/qt-src-stable/qtbase/tests/auto/corelib/tools/qstring/tst_qstring.cpp:4755 :: ICU disagrees with test]]></system-out>
-    </testcase>
-    <testcase classname="tst_QString" name="split" time="0.000"/>
-    <testcase classname="tst_QString" name="split_regexp" time="0.000"/>
-    <testcase classname="tst_QString" name="fromUtf16" time="0.000"/>
-    <testcase classname="tst_QString" name="latin1String" time="0.000"/>
-    <testcase classname="tst_QString" name="nanAndInf" time="0.000"/>
-    <testcase classname="tst_QString" name="compare" time="0.000"/>
-    <testcase classname="tst_QString" name="resizeAfterFromRawData" time="0.000"/>
-    <testcase classname="tst_QString" name="resizeAfterReserve" time="0.000"/>
-    <testcase classname="tst_QString" name="resizeWithNegative" time="0.000"/>
-    <testcase classname="tst_QString" name="truncateWithNegative" time="0.000"/>
-    <testcase classname="tst_QString" name="QCharRefMutableUnicode" time="0.000"/>
-    <testcase classname="tst_QString" name="QCharRefDetaching" time="0.000"/>
-    <testcase classname="tst_QString" name="sprintfZU" time="0.000"/>
-    <testcase classname="tst_QString" name="repeatedSignature" time="0.000"/>
-    <testcase classname="tst_QString" name="repeated" time="0.000"/>
-    <testcase classname="tst_QString" name="compareRef" time="0.000"/>
-    <testcase classname="tst_QString" name="arg_locale" time="0.000"/>
-    <testcase classname="tst_QString" name="toUpperLower_icu" time="0.006"/>
-    <testcase classname="tst_QString" name="eightBitLiterals" time="0.000"/>
-    <testcase classname="tst_QString" name="reserve" time="0.000"/>
-    <testcase classname="tst_QString" name="toHtmlEscaped" time="0.000"/>
-    <testcase classname="tst_QString" name="operatorGreaterWithQLatin1String" time="0.000"/>
-    <testcase classname="tst_QString" name="compareQLatin1Strings" time="0.000"/>
-    <testcase classname="tst_QString" name="fromQLatin1StringWithLength" time="0.000"/>
-    <testcase classname="tst_QString" name="assignQLatin1String" time="0.000"/>
-    <testcase classname="tst_QString" name="isRightToLeft" time="0.000"/>
-    <testcase classname="tst_QString" name="cleanupTestCase" time="0.000"/>
-    <system-out/>
-    <system-err/>
+   <properties>
+      <property name="QtVersion" value="5.2.0"/>
+      <property name="QTestVersion" value="5.2.0"/>
+   </properties>
+   <testcase classname="tst_QString" name="initTestCase" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="fromStdString" time="0.013" line="0"/>
+   <testcase classname="tst_QString" name="toStdString" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="check_QTextIOStream" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="check_QTextStream" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="check_QDataStream" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="fromRawData" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="setRawData" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="endsWith" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="startsWith" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="setNum" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="toDouble[ok00]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="toDouble[ok01]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="toDouble[ok02]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="toDouble[ok03]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="toDouble[ok04]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="toDouble[ok05]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="toDouble[ok06]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="toDouble[ok07]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="toDouble[ok08]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="toDouble[ok09]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="toDouble[ok10]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="toDouble[ok11]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="toDouble[wrong00]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="toDouble[wrong01]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="toDouble[wrong02]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="toDouble[wrong03]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="toDouble[wrong04]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="toDouble[wrong05]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="toDouble[wrong06]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="toDouble[wrong07]" time="0.001" line="0"/>
+   <testcase classname="tst_QString" name="toFloat" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="toLong[default]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="toLong[empty]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="toLong[normal]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="toLong[long_max]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="toLong[negative]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="toULong[default]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="toULong[empty]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="toULong[ulong1]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="toULong[ulong2]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="toLongLong" time="0.070" line="0"/>
+   <testcase classname="tst_QString" name="toULongLong" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="toUInt" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="toInt" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="toShort" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="toUShort" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_qchar_qchar[1]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_qchar_qchar[2]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_qchar_qchar[3]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_qchar_qchar[4]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_qchar_qchar[5]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_qchar_qchar[6]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_qchar_qchar[7]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_qchar_qstring[1]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_qchar_qstring[2]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_qchar_qstring[3]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_qchar_qstring[4]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_qchar_qstring[5]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_qchar_qstring[6]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_qchar_qstring[7]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_qchar_qstring[8]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_uint_uint[rem00]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_uint_uint[rem01]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_uint_uint[rem04]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_uint_uint[rem05]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_uint_uint[rem06]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_uint_uint[rep00]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_uint_uint[rep01]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_uint_uint[rep02]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_uint_uint[rep03]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_uint_uint[rep04]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_uint_uint[rep05]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_uint_uint[rep06]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_uint_uint[rep07]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_uint_uint[rep08]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_uint_uint[rep09]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_uint_uint[rep10]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_uint_uint[rep11]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_uint_uint[rep12]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_uint_uint[rep13]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_uint_uint[rep14]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_uint_uint[rep15]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_uint_uint[no overflow]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="replace_uint_uint[overflow]" time="0.001"
+             line="0"/>
+   <testcase classname="tst_QString" name="replace_uint_uint_extra" time="0.223" line="0"/>
+   <testcase classname="tst_QString" name="replace_string[rem00]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_string[rem01]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_string[rem02]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_string[rem03]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_string[rem04]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_string[rem05]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_string[rem06]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_string[rem07]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_string[rem08]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_string[rem09]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_string[rem10]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_string[rem11]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_string[rem12]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_string[rem13]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_string[rem14]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_string[rem15]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_string[rem16]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_string[rem17]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_string[rem18]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_string[rem19]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_string[rem20]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_string[rem21]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_string[rem22]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_string[rep00]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_string[rep01]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_string[rep02]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_string[rep03]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_string[rep04]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_string[rep05]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_string[rep06]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_string[rep07]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_string[rep08]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_string[rep09]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_string[rep10]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_string[rep11]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_string[rep12]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_string[rep13]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_string[rep14]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_string[rep15]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_string[rep16]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_string[rep17]" time="0.004" line="0"/>
+   <testcase classname="tst_QString" name="replace_regexp[rem00]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_regexp[rem01]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_regexp[rem02]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_regexp[rem03]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_regexp[rem04]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_regexp[rem05]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_regexp[rep00]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_regexp[rep01]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_regexp[rep02]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_regexp[rep03]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_regexp[backref00]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_regexp[backref01]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_regexp[backref02]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_regexp[backref03]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_regexp[backref04]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_regexp[backref05]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_regexp[backref06]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_regexp[backref07]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_regexp[backref08]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_regexp[backref09]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_regexp[backref10]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="replace_regexp[invalid]" time="0.008" line="0"/>
+   <testcase classname="tst_QString" name="remove_uint_uint[rem00]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_uint_uint[rem01]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_uint_uint[rem04]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_uint_uint[rem05]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_uint_uint[rem06]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_uint_uint[rep00]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_uint_uint[rep01]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_uint_uint[rep02]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_uint_uint[rep03]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_uint_uint[rep04]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_uint_uint[rep05]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_uint_uint[rep06]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_uint_uint[rep07]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_uint_uint[rep08]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_uint_uint[rep09]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_uint_uint[rep10]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_uint_uint[rep11]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_uint_uint[rep12]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_uint_uint[rep13]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_uint_uint[rep14]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_uint_uint[rep15]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_uint_uint[no overflow]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="remove_uint_uint[overflow]" time="0.001" line="0"/>
+   <testcase classname="tst_QString" name="remove_string[rem00]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_string[rem01]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_string[rem02]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_string[rem03]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_string[rem04]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_string[rem05]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_string[rem06]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_string[rem07]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_string[rem08]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_string[rem09]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_string[rem10]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_string[rem11]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_string[rem12]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_string[rem13]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_string[rem14]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_string[rem15]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_string[rem16]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_string[rem17]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_string[rem18]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_string[rem19]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_string[rem20]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_string[rem21]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_string[rem22]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_string[rep00]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_string[rep01]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_string[rep02]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_string[rep03]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_string[rep04]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_string[rep05]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_string[rep06]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_string[rep07]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_string[rep08]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_string[rep09]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_string[rep10]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_string[rep11]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_string[rep12]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_string[rep13]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_string[rep14]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_string[rep15]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_string[rep16]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_string[rep17]" time="0.003" line="0"/>
+   <testcase classname="tst_QString" name="remove_regexp[rem00]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_regexp[rem01]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_regexp[rem02]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_regexp[rem03]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_regexp[rem04]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_regexp[rem05]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_regexp[rep00]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_regexp[rep01]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_regexp[rep02]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_regexp[rep03]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_regexp[backref00]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_regexp[backref01]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_regexp[backref02]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_regexp[backref03]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_regexp[backref04]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_regexp[backref05]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_regexp[backref06]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_regexp[backref07]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_regexp[backref08]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_regexp[backref09]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_regexp[backref10]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="remove_regexp[invalid]" time="0.001" line="0">
+      <system-err>
+         <![CDATA[QWARN : QString::replace: invalid QRegularExpression object]]>
+      </system-err>
+   </testcase>
+   <testcase classname="tst_QString" name="swap" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="prepend" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="prepend_bytearray[emptyString]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="prepend_bytearray[emptyByteArray]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="prepend_bytearray[nonAsciiByteArray]"
+             time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="prepend_bytearray[nonAsciiByteArray2]"
+             time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="append" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="append_bytearray[notTerminated_0]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="append_bytearray[notTerminated_1]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="append_bytearray[notTerminated_2]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="append_bytearray[emptyString]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="append_bytearray[emptyByteArray]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="append_bytearray[nonAsciiByteArray]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="append_bytearray[nonAsciiByteArray2]"
+             time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="operator_pluseq_bytearray[notTerminated_0]"
+             time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="operator_pluseq_bytearray[notTerminated_1]"
+             time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="operator_pluseq_bytearray[notTerminated_2]"
+             time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="operator_pluseq_bytearray[emptyString]"
+             time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="operator_pluseq_bytearray[emptyByteArray]"
+             time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="operator_pluseq_bytearray[nonAsciiByteArray]"
+             time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="operator_pluseq_bytearray[nonAsciiByteArray2]"
+             time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="operator_eqeq_bytearray[1]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="operator_eqeq_bytearray[2]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="operator_eqeq_bytearray[3]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="operator_eqeq_bytearray[4]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="operator_eqeq_bytearray[4-bis]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="operator_eqeq_bytearray[4-tre]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="operator_eqeq_nullstring" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="operator_smaller" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="insert" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="simplified[null]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="simplified[empty]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="simplified[one char]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="simplified[one word]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="simplified[chars trivial]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="simplified[words trivial]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="simplified[allspace]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="simplified[char trailing]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="simplified[char trailing tab]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="simplified[char multitrailing]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="simplified[char multitrailing tab]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="simplified[char leading]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="simplified[char leading tab]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="simplified[char multileading]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="simplified[char multileading tab]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="simplified[chars apart]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="simplified[words apart]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="simplified[enclosed word]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="simplified[enclosed chars apart]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="simplified[enclosed words apart]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="simplified[chars apart posttab]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="simplified[chars apart pretab]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="simplified[many words]" time="0.001" line="0"/>
+   <testcase classname="tst_QString" name="trimmed" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="toUpper" time="0.000"
+             file="/home/frederik/dev/qt/qt-src-stable/qtbase/tests/auto/corelib/tools/qstring/tst_qstring.cpp"
+             line="1876">
+      <system-out>
+         <![CDATA[XFAIL : /home/frederik/dev/qt/qt-src-stable/qtbase/tests/auto/corelib/tools/qstring/tst_qstring.cpp:1876 :: 
+                test doesn't work with ICU support, since QChar is unaware of any locale]]>
+      </system-out>
+   </testcase>
+   <testcase classname="tst_QString" name="toUpper" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="toLower" time="0.000"
+             file="/home/frederik/dev/qt/qt-src-stable/qtbase/tests/auto/corelib/tools/qstring/tst_qstring.cpp"
+             line="1935">
+      <system-out>
+         <![CDATA[XFAIL : /home/frederik/dev/qt/qt-src-stable/qtbase/tests/auto/corelib/tools/qstring/tst_qstring.cpp:1935 :: 
+                test doesn't work with ICU support, since QChar is unaware of any locale]]>
+      </system-out>
+   </testcase>
+   <testcase classname="tst_QString" name="toLower" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="toCaseFolded" time="0.071" line="0"/>
+   <testcase classname="tst_QString" name="rightJustified" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="leftJustified" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="mid" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="right" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="left" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="midRef" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="rightRef" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="leftRef" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="stringRef" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="contains" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="count" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="lastIndexOf[-1]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="lastIndexOf[1]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="lastIndexOf[2]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="lastIndexOf[3]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="lastIndexOf[4]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="lastIndexOf[5]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="lastIndexOf[6]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="lastIndexOf[7]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="lastIndexOf[8]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="lastIndexOf[9]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="lastIndexOf[10]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="lastIndexOf[11]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="lastIndexOf[12]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="lastIndexOf[13]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="lastIndexOf[14]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="lastIndexOf[15]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="lastIndexOf[16]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="lastIndexOf[17]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="lastIndexOf[19]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="lastIndexOf[20]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="lastIndexOf[21]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="lastIndexOf[22]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="lastIndexOf[24]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="lastIndexOf[25]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="lastIndexOf[26]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="lastIndexOf[27]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="lastIndexOf[28]" time="0.003" line="0"/>
+   <testcase classname="tst_QString" name="lastIndexOfInvalidRegex" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf[data0]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf[data1]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf[data2]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf[data3]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf[data4]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf[data5]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf[data6]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf[data7]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf[data8]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf[data9]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf[data10]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf[data11]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf[data12]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf[data13]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf[data14]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf[data15]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf[data16]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf[data17]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf[data20]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf[data21]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf[data22]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf[data23]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf[data24]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf[data25]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf[data26]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf[data27]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf[data28]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf[data29]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf[data30]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf[data31]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf[data32]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf[data33]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf[data34]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf[data35]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf[data36]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf[data37]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf[data40]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf[data41]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf[data42]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf[data43]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf[data44]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf[data45]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf[data46]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf[data47]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf[data48]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf[data49]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf[data50]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf[data51]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf[data52]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf[data53]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf[data54]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf[data55]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf[data56]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf[data57]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf[data58]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf[data59]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf[BoyerMooreStressTest]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="indexOf[BoyerMooreStressTest2]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="indexOf[BoyerMooreStressTest3]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="indexOf[BoyerMooreStressTest4]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="indexOf[BoyerMooreStressTest5]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="indexOf[BoyerMooreStressTest6]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="indexOf[BoyerMooreStressTest7]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="indexOf[BoyerMooreInsensitiveStressTest]"
+             time="0.118"
+             line="0"/>
+   <testcase classname="tst_QString" name="indexOf2[data0]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf2[data1]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf2[data2]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf2[data3]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf2[data4]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf2[data5]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf2[data6]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf2[data7]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf2[data8]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf2[data9]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf2[data10]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf2[data11]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf2[data12]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf2[data13]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf2[data14]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf2[data15]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf2[data16]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf2[data17]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf2[data18]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf2[data19]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf2[data30]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf2[data31]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf2[data32]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf2[data33]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf2[data34]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf2[data35]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf2[data36]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf2[data37]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf2[data40]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf2[data41]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf2[data42]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf2[data43]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf2[data44]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf2[data45]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf2[data46]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf2[data47]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="indexOf2[data48]" time="0.002" line="0"/>
+   <testcase classname="tst_QString" name="sprintf" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="fill" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="truncate" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="constructor" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="constructorQByteArray[1]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="constructorQByteArray[2]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="constructorQByteArray[3]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="constructorQByteArray[4]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="constructorQByteArray[4-bis]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="constructorQByteArray[4-tre]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="STL" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="isEmpty" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="isNull" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="acc_01" time="0.000" line="0">
+      <system-err>
+         <![CDATA[QWARN : QIODevice::write: device not open]]>
+      </system-err>
+   </testcase>
+   <testcase classname="tst_QString" name="length[data0]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="length[data1]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="length[data2]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="length[data3]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="length[data4]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="length[data5]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="length[data6]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="length[data7]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="length[data8]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="length[data9]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="length[data10]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="length[data11]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="utf8[str0]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="utf8[str1]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="utf8[str2]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="utf8[str3]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="utf8[surrogate]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="fromUtf8[str0]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="fromUtf8[str0-len]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="fromUtf8[str1]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="fromUtf8[str1-len]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="fromUtf8[str2]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="fromUtf8[str2-len]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="fromUtf8[str3]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="fromUtf8[str3-len]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="fromUtf8[invalid utf8]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="fromUtf8[invalid utf8-len]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="fromUtf8[invalid utf8 2]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="fromUtf8[invalid utf8-len 2]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="fromUtf8[null-1]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="fromUtf8[null0]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="fromUtf8[null5]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="fromUtf8[empty-1]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="fromUtf8[empty0]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="fromUtf8[empty5]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="fromUtf8[other-1]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="fromUtf8[other5]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="fromUtf8[surrogate]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="fromUtf8[surrogate-len]" time="0.001" line="0"/>
+   <testcase classname="tst_QString" name="nullFromUtf8" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="fromLocal8Bit[stringlen99]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="local8Bit[nullString]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="local8Bit[emptyString]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="local8Bit[string]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="local8Bit[longString]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="local8Bit[someNonAlphaChars]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="fromLatin1Roundtrip[null]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="fromLatin1Roundtrip[empty]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="fromLatin1Roundtrip[ascii-only]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="fromLatin1Roundtrip[ascii+control]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="fromLatin1Roundtrip[ascii+nul]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="fromLatin1Roundtrip[non-ascii]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="toLatin1Roundtrip[null]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="toLatin1Roundtrip[empty]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="toLatin1Roundtrip[ascii-only]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="toLatin1Roundtrip[ascii+control]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="toLatin1Roundtrip[ascii+nul]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="toLatin1Roundtrip[non-ascii]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="toLatin1Roundtrip[non-latin1a]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="toLatin1Roundtrip[non-latin1b]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="stringRef_toLatin1Roundtrip[null]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="stringRef_toLatin1Roundtrip[empty]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="stringRef_toLatin1Roundtrip[ascii-only]"
+             time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="stringRef_toLatin1Roundtrip[ascii+control]"
+             time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="stringRef_toLatin1Roundtrip[ascii+nul]"
+             time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="stringRef_toLatin1Roundtrip[non-ascii]"
+             time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="stringRef_toLatin1Roundtrip[non-latin1a]"
+             time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="stringRef_toLatin1Roundtrip[non-latin1b]"
+             time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="stringRef_utf8[str0]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="stringRef_utf8[str1]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="stringRef_utf8[str2]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="stringRef_utf8[str3]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="stringRef_utf8[surrogate]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="stringRef_local8Bit[nullString]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="stringRef_local8Bit[emptyString]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="stringRef_local8Bit[string]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="stringRef_local8Bit[longString]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="stringRef_local8Bit[someNonAlphaChars]"
+             time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="fromLatin1" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="fromAscii" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="fromUcs4" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="toUcs4" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="arg" time="0.001" line="0">
+      <system-err>
+         <![CDATA[QWARN : QString::arg: Argument missing: "" , 0 ]]>
+         <![CDATA[QWARN : QString::arg: Argument missing: "" , 0 ]]>
+         <![CDATA[QWARN : QString::arg: Argument missing: " " , 0 ]]>
+         <![CDATA[QWARN : QString::arg: Argument missing: "%" , 0 ]]>
+         <![CDATA[QWARN : QString::arg: Argument missing: "%%" , 0 ]]>
+         <![CDATA[QWARN : QString::arg: Argument missing: "%%%" , 0 ]]>
+      </system-err>
+   </testcase>
+   <testcase classname="tst_QString" name="number" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="arg_fillChar[str0]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="arg_fillChar[str1]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="arg_fillChar[str2]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="capacity[data0]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="capacity[data1]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="capacity[data2]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="capacity[data3]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="capacity[data4]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="capacity[data5]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="capacity[data6]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="capacity[data7]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="capacity[data8]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="capacity[data9]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="capacity[data10]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="capacity[data11]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="section[data0]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="section[data1]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="section[data2]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="section[data3]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="section[data4]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="section[data5]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="section[data6]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="section[data7]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="section[data8]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="section[data9]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="section[data10]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="section[data11]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="section[data12]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="section[foo1]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="section[foo2]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="section[foo3]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="section[foo1rx]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="section[foo2rx]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="section[foo3rx]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="section[qmake_path]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="section[qmake_pathrx]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="section[data13]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="section[data14]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="section[data15]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="section[data16]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="section[normal1]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="section[normal2]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="section[normal3]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="section[normal4]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="section[normal5]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="section[rx1]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="section[rx2]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="section[rx3]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="section[rx4]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="section[rx5]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="section[data17]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="section[data18]" time="0.004" line="0"/>
+   <testcase classname="tst_QString" name="double_conversion[C 1]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="double_conversion[C 1.0]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="double_conversion[C 1.234]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="double_conversion[C 1.234e-10]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="double_conversion[C 1.234E10]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="double_conversion[C 1e10]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="double_conversion[C empty]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="double_conversion[C null]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="double_conversion[C .]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="double_conversion[C 1e]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="double_conversion[C 1,]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="double_conversion[C 1,0]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="double_conversion[C 1,000]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="double_conversion[C 1e1.0]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="double_conversion[C 1e+]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="double_conversion[C 1e-]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="double_conversion[de_DE 1,0]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="double_conversion[de_DE 1,234]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="double_conversion[de_DE 1,234e-10]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="double_conversion[de_DE 1,234E10]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="double_conversion[C .1]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="double_conversion[C -.1]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="double_conversion[C 1.]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="double_conversion[C 1.E10]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="double_conversion[C 1e+10]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="double_conversion[C   1]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="double_conversion[C 1  ]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="double_conversion[ar_SA]" time="0.001" line="0"/>
+   <testcase classname="tst_QString" name="integer_conversion[C empty 0]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="integer_conversion[C empty 8]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="integer_conversion[C empty 10]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="integer_conversion[C empty 16]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="integer_conversion[C null 0]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="integer_conversion[C null 8]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="integer_conversion[C null 10]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="integer_conversion[C null 16]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="integer_conversion[C   -0xf 0]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="integer_conversion[C -0xf   0]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="integer_conversion[C &#x9;0xf&#x9; 0]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="integer_conversion[C   -010 0]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="integer_conversion[C 010   0]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="integer_conversion[C &#x9;-010&#x9; 0]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="integer_conversion[C   123 10]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="integer_conversion[C 123   10]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="integer_conversion[C &#x9;123&#x9; 10]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="integer_conversion[C   -0xf 16]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="integer_conversion[C -0xf   16]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="integer_conversion[C &#x9;0xf&#x9; 16]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="integer_conversion[C -0 0]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="integer_conversion[C -0 8]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="integer_conversion[C -0 10]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="integer_conversion[C -0 16]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="integer_conversion[C 1.234 10]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="integer_conversion[C 1,234 10]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="integer_conversion[C 0x 0]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="integer_conversion[C 0x 16]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="integer_conversion[C 10 0]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="integer_conversion[C 010 0]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="integer_conversion[C 0x10 0]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="integer_conversion[C 10 8]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="integer_conversion[C 010 8]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="integer_conversion[C 0x10 8]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="integer_conversion[C 10 10]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="integer_conversion[C 010 10]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="integer_conversion[C 0x10 10]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="integer_conversion[C 10 16]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="integer_conversion[C 010 16]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="integer_conversion[C 0x10 16]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="integer_conversion[C -10 0]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="integer_conversion[C -010 0]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="integer_conversion[C -0x10 0]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="integer_conversion[C -10 8]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="integer_conversion[C -010 8]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="integer_conversion[C -0x10 8]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="integer_conversion[C -10 10]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="integer_conversion[C -010 10]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="integer_conversion[C -0x10 10]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="integer_conversion[C -10 16]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="integer_conversion[C -010 16]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="integer_conversion[C -0x10 16]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="integer_conversion[ar_SA 1234 0]" time="0.002"
+             line="0"/>
+   <testcase classname="tst_QString" name="tortureSprintfDouble" time="0.124" line="0"/>
+   <testcase classname="tst_QString" name="toNum" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="localeAwareCompare[c1]" time="0.000"
+             file="/home/frederik/dev/qt/qt-src-stable/qtbase/tests/auto/corelib/tools/qstring/tst_qstring.cpp"
+             line="4755">
+      <system-out>
+         <![CDATA[XFAIL : /home/frederik/dev/qt/qt-src-stable/qtbase/tests/auto/corelib/tools/qstring/tst_qstring.cpp:4755 :: ICU disagrees with test]]>
+      </system-out>
+   </testcase>
+   <testcase classname="tst_QString" name="localeAwareCompare[c1]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="localeAwareCompare[c2]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="localeAwareCompare[c3]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="localeAwareCompare[english1]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="localeAwareCompare[english2]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="localeAwareCompare[english3]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="localeAwareCompare[swedish1]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="localeAwareCompare[swedish2]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="localeAwareCompare[swedish3]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="localeAwareCompare[swedish4]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="localeAwareCompare[german1]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="localeAwareCompare[german2]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="localeAwareCompare[german3]" time="0.070"
+             line="0"/>
+   <testcase classname="tst_QString" name="split[1]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="split[2]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="split[one-empty]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="split[two-empty]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="split[three-empty]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="split[all-empty]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="split[sep-empty]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="split_regexp[data01]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="split_regexp[data02]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="split_regexp[data03]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="fromUtf16[str0]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="fromUtf16[str0-len]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="latin1String" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="nanAndInf" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="compare[data0]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="compare[data1]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="compare[data2]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="compare[data3]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="compare[data4]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="compare[data5]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="compare[data6]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="compare[data7]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="compare[data8]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="compare[data8]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="resizeAfterFromRawData" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="resizeAfterReserve" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="resizeWithNegative" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="truncateWithNegative" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="QCharRefMutableUnicode" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="QCharRefDetaching" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="sprintfZU" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="repeatedSignature" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="repeated[data1]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="repeated[data2]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="repeated[data3]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="repeated[data4]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="repeated[data5]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="repeated[data6]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="repeated[data7]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="repeated[data8]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="repeated[data9]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="repeated[data10]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="repeated[data11]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="compareRef" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="arg_locale" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="toUpperLower_icu" time="0.006" line="0"/>
+   <testcase classname="tst_QString" name="eightBitLiterals[null]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="eightBitLiterals[empty]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="eightBitLiterals[regular]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="eightBitLiterals[non-ascii]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="reserve" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="toHtmlEscaped[1]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="toHtmlEscaped[2]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="toHtmlEscaped[3]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="toHtmlEscaped[4]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="operatorGreaterWithQLatin1String" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="compareQLatin1Strings" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="fromQLatin1StringWithLength" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="assignQLatin1String" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="isRightToLeft[null]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="isRightToLeft[empty]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="isRightToLeft[numbers-only]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="isRightToLeft[latin1-only]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="isRightToLeft[numbers-latin1]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="isRightToLeft[arabic-only]" time="0.000" line="0"/>
+   <testcase classname="tst_QString" name="isRightToLeft[numbers-arabic]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="isRightToLeft[numbers-latin1-arabic]"
+             time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="isRightToLeft[numbers-arabic-latin1]"
+             time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="isRightToLeft[surrogates-VS-CJK]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="isRightToLeft[surrogates-cypriot]" time="0.000"
+             line="0"/>
+   <testcase classname="tst_QString" name="cleanupTestCase" time="0.000" line="0"/>
+   <system-out/>
+   <system-err/>
 </testsuite>
